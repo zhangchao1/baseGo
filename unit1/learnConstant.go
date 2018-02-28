@@ -8,6 +8,7 @@ type ByteSize float64
 
 //iota
 
+//参考文档地址 https://golang.org/ref/spec#Iota
 const (
 	KB ByteSize = 1 << iota
 	MB
