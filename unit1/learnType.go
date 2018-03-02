@@ -31,14 +31,16 @@ func runTwoBit() {
 }
 
 func runOneBit() {
-	bb1 := ^2
-	bb2 := ^-2
-	fmt.Println(bb1, bb2)
+	bb1 := ^1
+	bb2 := 3 >> 1
+	bb3 := 3 << 2
+
+	fmt.Println(bb1, bb2, bb3)
 }
 
-func main() {
-	//runInt()
-	//runComplex()
-	//runTwoBit()
+func runType() {
+	runInt()
+	runComplex()
+	runTwoBit()
 	runOneBit()
 }
