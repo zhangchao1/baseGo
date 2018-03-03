@@ -38,6 +38,12 @@ func compareTime(a string, b string) int {
 	}
 }
 
+func addDays(n int, format string) string {
+	tempTime := time.Now()
+	addTime := tempTime.AddDate(0, 0, n)
+	return addTime.Format(format)
+}
+
 func runTime() {
 	fmt.Println(formatTimeToString())
 	fmt.Println(timeNow())
@@ -49,4 +55,7 @@ func runTime() {
 	fmt.Println(compareTime("2018-09-01 00:00:00", "2018-07-09 00:00:00"))
 	fmt.Println(compareTime("2018-01-01 00:00:00", "2018-07-09 00:00:00"))
 	fmt.Println(compareTime("2018-07-09 00:00:00", "2018-07-09 00:00:00"))
+
+	fmt.Println(addDays(1, "20060102"))  //明天的时间
+	fmt.Println(addDays(-1, "20060102")) //昨天的时间
 }
