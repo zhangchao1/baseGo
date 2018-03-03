@@ -142,6 +142,9 @@ unicode(utf-8)
 包utf8 拥有更多与 rune 相关的函数。
 
 
+#### string
+备注：string在拼接的时候，推荐使用strings.Join()或者字节缓冲（bytes.Buffer）拼接
+
 
 
 
