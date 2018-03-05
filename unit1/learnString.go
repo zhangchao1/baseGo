@@ -1,4 +1,4 @@
-package uint1
+package unit1
 
 import (
 	"fmt"
