@@ -1,4 +1,4 @@
-package main
+package unit4
 
 import (
 	"fmt"
@@ -58,7 +58,7 @@ func runCopy() {
 	fmt.Println(len(a), cap(a), a, b)
 }
 
-func main() {
+func runSlice() {
 	//basicSlice()
 	//diffNewAndMake()
 	//runForRange()
