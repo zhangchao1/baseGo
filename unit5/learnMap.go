@@ -21,7 +21,22 @@ func deleteKey() {
 	fmt.Println(b)
 }
 
+func keyValueChange() {
+	var b = map[string]int{
+		"a": 1,
+		"b": 1,
+		"c": 2,
+	}
+
+	var b1 = make(map[int]string, len(b))
+	for k, v := range b {
+		b1[v] = k
+	}
+	fmt.Println(b1)
+}
+
 func main() {
-	checkKey()
-	deleteKey()
+	//checkKey()
+	//deleteKey()
+	keyValueChange()
 }

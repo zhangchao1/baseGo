@@ -40,3 +40,25 @@ for key, value := range map1 {
 }
 ```
 第一个返回值 key 是 map 中的 key 值，第二个返回值则是该 key 对应的 value 值；这两个都是仅 for 循环内部可见的局部变量。其中第一个返回值key值是一个可选元素。
+
+#### map的key和value进行对调
+示例如下：
+```
+func keyValueChange() {
+	var b = map[string]int{
+		"a": 1,
+		"b": 1,
+		"c": 2,
+	}
+
+	var b1 = make(map[int]string, len(b))
+	for k, v := range b {
+		b1[v] = k
+	}
+	fmt.Println(b1)
+}
+```
+注意事项：
+果原始 value 值不唯一那么这么做肯定会出错；为了保证不出错，当遇到不唯一的 key 时应当立刻停止，这样可能会导致没有包含原 map 的所有键值对！一种解决方法就是仔细检查唯一性并且使用多值 map，比如使用 map[int][]string 类型。
+
+map本身是无序的，使用sort对map排序的
