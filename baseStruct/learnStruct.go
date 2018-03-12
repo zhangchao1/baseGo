@@ -1,4 +1,4 @@
-package unit6
+package baseStruct
 
 import (
 	"fmt"

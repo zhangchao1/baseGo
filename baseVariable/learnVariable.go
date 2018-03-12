@@ -1,4 +1,4 @@
-package unit1
+package baseVariable
 
 import (
 	"fmt"

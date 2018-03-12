@@ -1,4 +1,4 @@
-package unit4
+package baseSliceAndArray
 
 import (
 	"fmt"
